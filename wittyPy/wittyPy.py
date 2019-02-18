@@ -144,6 +144,8 @@ class WittyPi():
         sys_time = datetime.datetime.now()
         self.timedelta = (sys_time - datetime.datetime.strptime(rtc, "%a %d %b %Y %H:%M:%S %Z")).total_seconds()
 
+    def get_temperature(self):
+        return self.__run_util_function("get_temperature")
 
 class WittyTime():
     '''WittyTime object to validate and store times for the WittyPi.
